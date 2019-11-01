@@ -1,0 +1,42 @@
+{
+  "name": "ava-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "ava": "^2.4.0",
+    "esm": "^3.2.25",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "jsx-test-helpers": "^3.0.0",
+    "nyc": "^14.1.1",
+    "react": "^16.11.0"
+  },
+  "scripts": {
+    "test": "ava -v",
+    "conver":"nyc --reporter=lcov --reporter=text-summary  ava -v "
+  },
+  "ava": {
+    "require": [
+      "@babel/register",
+      "@babel/polyfill"
+    ],
+    "babel": {
+      "extensions": [
+				"js",
+				"jsx"
+      ],
+      "testOptions": {
+        "presets": [
+          "@babel/preset-react"
+        ],
+        "plugins": [
+          "@babel/plugin-syntax-jsx"
+        ]
+      }
+    }
+  }
+}
