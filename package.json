@@ -1,5 +1,5 @@
 {
-  "name": "@rongfengliang/ava-app",
+  "name": "@rongfengliang/ava-react-demo",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "ava -v",
-    "conver":"nyc --reporter=lcov --reporter=text-summary  ava -v "
+    "conver": "nyc --reporter=lcov --reporter=text-summary  ava -v "
   },
   "ava": {
     "require": [
@@ -26,8 +26,8 @@
     ],
     "babel": {
       "extensions": [
-				"js",
-				"jsx"
+        "js",
+        "jsx"
       ],
       "testOptions": {
         "presets": [
@@ -38,5 +38,8 @@
         ]
       }
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
